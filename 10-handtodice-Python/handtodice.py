@@ -8,11 +8,15 @@
 def handtodice(hand):
     # your code goes here
     p=[]#empty list
-    r=str(hand)#converting int to str for iteration
-    for i in r:
+    #r=str(hand)#converting int to str for iteration
+    while hand>0:
         i=hand%10#3
         hand=hand//10
         p.append(i)
     return(tuple(p[::-1]))
+
+    # l = [int(i) for i in str(hand)]
+    # print(tuple(l))
+
     
    
