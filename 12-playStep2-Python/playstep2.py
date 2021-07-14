@@ -34,5 +34,20 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def playstep2(hand, dice):
-	# your code goes here
-	pass
+    # your code goes here
+    if len((dict.fromkeys(hand)))==1:# removing duplicate items in hand by Create a dictionary, using the List items as keys. This will automatically remove any duplicates because dictionaries cannot have duplicate keys.
+        return (hand,dice)
+    elif (len((dict.fromkeys(hand)))!=2):
+        p=max(str(hand))+str(dice[-2:])
+        q="".join(sorted(p))
+        return (int(q[::-1]),int(str(dice[0:-2])))
+    else:
+        p=str(dice[-1:])
+        for i in str(hand):
+            if str(hand).count(i)>1:
+                p+=i
+        q="".join(sorted(p))
+        return (int(q[::-1]),int(str(dice[0:-2])))
+
+            
+
