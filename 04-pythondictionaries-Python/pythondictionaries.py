@@ -33,6 +33,7 @@ Asian City - Country"""
 
 def sortUSA():
     '''Return all the cities in the USA in alphabetical order'''
+    return  {'Bangalore': 'India'}
     pass
 
 def alphaAsia():
