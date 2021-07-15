@@ -6,12 +6,10 @@
 def removeduplicate(text):
     # Your code goes here
     p=[]
-    c=""
     for i in text:
       if i not in p:
         p.append(i)
-      c="".join(p)
-    return c
+    return "".join(p)
     
         
 
