@@ -51,9 +51,9 @@ def playstep2(hand, dice):
 	  dice=str(dice)
 	  hand=str(hand)
 	  str_res= dice[-1:]#dice last element
-	  for char in (hand):
-		  if hand.count(char)>1:
-			  str_res+=char
+	  for i in (hand):
+		  if hand.count(i)>1:
+			  str_res+=i
 	  res = ''.join(sorted(str_res))
 	  return (int(res[::-1]),int(dice[0:-1]))
 
