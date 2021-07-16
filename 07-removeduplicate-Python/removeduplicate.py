@@ -10,6 +10,8 @@ def removeduplicate(text):
       if i not in p:
         p.append(i)
     return "".join(p)
+    # p=dict.fromkeys(text)
+    # return("".join(dict.fromkeys(p)))
     
         
 
