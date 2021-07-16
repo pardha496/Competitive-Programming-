@@ -11,14 +11,38 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-    r=""
-    for i in msg:
-        s=ord(i)
-        s+=shift
-        r+=chr(s)
+    # r=""
+    # for i in msg:
+    #     s=ord(i)
+    #     if (i.isupper()):
+            
+    #         #s+=shift
+    #         r+=chr((s + shift-65) % 26 + 65)
+    #         return r
+    #     else:
+    #         r += chr((s + shift - 97) % 26 + 97)
+    #         return r
+    result = ""
+ 
+    # traverse text
+    for i in range(len(msg)):
+        char = msg[i]
+ 
+        # Encrypt uppercase characters
+        if (char.isupper()):
+            result += chr((ord(char) + shift-65) % 26 + 65)
+ 
+        # Encrypt lowercase characters
+        elif(char==" "):
+            result += " "
+
+        else:
+            result += chr((ord(char) + shift - 97) % 26 + 97)
+ 
+    return result
     
     
-    return (r.replace("!", " "))
+    
 
 
 
