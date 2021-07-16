@@ -4,7 +4,20 @@
 
 def mostfrequentdigit(n):
     # your code goes here
-    if(n>0)
+    p = abs(n)
+    if p == 0:
+        return 0
+    else:
+        while(p>0):
+            num=p
+            p1 = num%10
+            num = num//10
+            p2= num%10
+            if(p1 != p2 and p>9):
+                p=p//10
+            else:
+                return p1
+        return min(p1,p2) 
 
 
 
