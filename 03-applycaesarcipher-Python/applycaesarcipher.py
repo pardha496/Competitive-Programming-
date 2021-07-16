@@ -11,8 +11,14 @@
 
 
 def fun_applycaesarcipher(msg, shift):
-	return ""
-
+    r=""
+    for i in msg:
+        s=ord(i)
+        s+=shift
+        r+=chr(s)
+    
+    
+    return (r.replace("!", " "))
 
 
 
