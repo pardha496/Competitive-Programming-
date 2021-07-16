@@ -22,9 +22,8 @@ def fun_applycaesarcipher(msg, shift):
     #     else:
     #         r += chr((s + shift - 97) % 26 + 97)
     #         return r
-    p = ""
- 
     
+    p = ""
     for i in range(len(msg)):
         q = msg[i]
         if (q.isupper()):
