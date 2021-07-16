@@ -22,24 +22,18 @@ def fun_applycaesarcipher(msg, shift):
     #     else:
     #         r += chr((s + shift - 97) % 26 + 97)
     #         return r
-    result = ""
+    p = ""
  
-    # traverse text
+    
     for i in range(len(msg)):
-        char = msg[i]
- 
-        # Encrypt uppercase characters
-        if (char.isupper()):
-            result += chr((ord(char) + shift-65) % 26 + 65)
- 
-        # Encrypt lowercase characters
-        elif(char==" "):
-            result += " "
-
+        q = msg[i]
+        if (q.isupper()):
+            p += chr((ord(q) + shift-65) % 26 + 65)
+        elif(q==" "):
+            p += " "
         else:
-            result += chr((ord(char) + shift - 97) % 26 + 97)
- 
-    return result
+            p += chr((ord(q) + shift - 97) % 26 + 97)
+    return p
     
     
     
