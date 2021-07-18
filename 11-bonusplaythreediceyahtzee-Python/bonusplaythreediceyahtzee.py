@@ -40,5 +40,11 @@
 
 
 def bonusplaythreediceyahtzee(dice):
-	# Your code goes here
-	pass
+    # Your code goes here
+    f=[int(i) for i in str(dice)]
+    if(f[0]==f[1]==f[2]):
+        return 20+f[0]+f[1]+f[2]
+    elif(f[0]!=f[1]!=f[2]):
+        return max(f)
+    else:
+        return ((max(set(f), key = f.count)*2)+10)
