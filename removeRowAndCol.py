@@ -27,6 +27,7 @@ def removeRowAndCol(L, row, col):
     for i in range(len(L)):
         L[i].pop(col)
         #del L(row)
+        
     print(L)
 L=[ [ 2, 3, 4, 5],
     [ 8, 7, 6, 5],
