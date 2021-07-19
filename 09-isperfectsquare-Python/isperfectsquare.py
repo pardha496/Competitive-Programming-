@@ -10,12 +10,23 @@ def isperfectsquare(n):
     #     return True
     # else:
     #     return False
-    if(n<0) or type(n)==str:
+    # if(n<0) or type(n)==str:
+    #     return False
+    
+    # elif ((n)**0.5) % 1 == 0:
+    #     return True
+    
+    # else:
+    #     return False
+    if isinstance(n, int) and n>=0:
+        return n == (math.sqrt(n)**2)
+    elif (isinstance(n, int) and  n<=0):
         return False
-    
-    elif ((n)**0.5) % 1 == 0:
-        return True
-    
+    elif isinstance(n, float):
+        return False
+    elif n.isdigit():
+        n=int(n)
+        return n == (math.sqrt(n)**2)
     else:
         return False
     
