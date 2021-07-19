@@ -18,5 +18,4 @@ def isperfectsquare(n):
     
     else:
         return False
-    if ((type(n)==int)):
-        return False
+    
