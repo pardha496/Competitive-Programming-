@@ -5,5 +5,5 @@
 # The two closest numbers in that list are 2 and 6, and their difference is 4.
 
 def smallestdifference(a):
-	# Your code goes here
+    	# Your code goes here
 	pass
