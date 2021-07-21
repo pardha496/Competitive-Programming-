@@ -6,9 +6,15 @@
 # (2x**22 + 3)(4x + 5) = 8x**3 + 10x**2 + 12x + 15
 # And so this returns [8, 10, 12, 15].
 
-def multiplyPolynomials(p1, p2):
-    # Your code goes here...
-    pass
-
-# Write your own test cases
-print ("All test cases passwed...")
+def multipolynomials(p1, p2):
+    # Your code goes here
+    a=len(p1)+len(p2)-1
+    x=[0]*a
+    po=[]
+    for i in range(len(p1)):
+        for j in range(len(p2)):
+            x.append(p1[i]*p2[j])
+    for i in range(len(x)):
+        if(x[i]!=0):
+            po.append(x[i])
+    return po
