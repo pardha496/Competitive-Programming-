@@ -6,32 +6,12 @@
 # in increasing order. How does a function return multiple values? Like so:
 # return root1, root2
 
-import math
-  
-  
-# function for finding roots
-def fun_find_int_roots( a, b, c): 
-  
-    # calculating discriminant using formula
-    dis = b * b - 4 * a * c 
-    sqrt_val = math.sqrt(abs(dis)) 
-      
-    # checking condition for discriminant
-    if dis > 0: 
-    
-        return((-b + sqrt_val)/(2 * a)) 
-        return((-b - sqrt_val)/(2 * a)) 
-      
-    elif dis == 0: 
-        
-        return(-b / (2 * a)) 
-      
-    # when discriminant is less than 0
-    else:
-        
-        return(- b / (2 * a), " + i", sqrt_val) 
-        return(- b / (2 * a), " - i", sqrt_val)
-
+import cmath
+def fun_find_int_roots(a, b, c):
+    d=(b**2)-(4*a*c)
+    sol1=(-b-(cmath.sqrt(d)))/2*a
+    sol2=(-b+(cmath.sqrt(d)))/2*a
+    return (sol1,sol2)
 
 
 
