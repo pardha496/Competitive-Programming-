@@ -13,6 +13,41 @@
 #   [ 2, 1]]
 # Each row and each column add to 3, but one diagonal adds to 2 and the other to 4.
 
-def ismostlymagicsquare(a):
-	# Your code goes here
-	pass
+def isMagicSquare( mat) :
+      n = len(mat)
+  # sumd1 and sumd2 are the sum of the two diagonals
+  sumd1=0
+  sumd2=0
+  for i in range(n):
+    # (i, i) is the diagonal from top-left -> bottom-right
+    # (i, n - i - 1) is the diagonal from top-right -> bottom-left
+    sumd1+=mat[i][i]
+    sumd2+=mat[i][n-i-1]
+    # if the two diagonal sums are unequal then it is not a magic square
+  if not(sumd1==sumd2):
+    return False
+  for i in range(n):
+    #sumr is rowsum and sumc is colsum
+    sumr=0
+    sumc=0
+    for j in range(n):
+      sumr+=mat[i][j]
+      sumc+=mat[j][i]
+    if not(sumr==sumc==sumd1):
+      return False
+    #if all the conditions are satisfied then it is a magic square
+  return True
+
+
+
+
+
+# Driver Code
+mat = [ [ 1, 2, 2 ],
+        [ 2, 2, 1 ],
+        [ 2, 1, 2 ] ]
+
+if (isMagicSquare(mat)) :
+    print( "Magic Square")
+else :
+    print( "Not a magic Square")
