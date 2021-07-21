@@ -6,5 +6,15 @@
 
 
 def nthpowerfulnumber(n):
-	# Your code goes here
-	pass
+    # Your code goes here
+    while(n%2==0):
+        power=0
+        while(n%2==0):
+            n=n//2
+            power=power+1
+        if(power==1):
+            return False
+    return (n==1)
+
+
+            
