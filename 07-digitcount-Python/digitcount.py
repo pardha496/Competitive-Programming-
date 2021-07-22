@@ -6,5 +6,13 @@
 # repeatedly remove the ones digit until you cannot.
 
 def digitcount(n):
-	# your code goes here
-	pass
+    # your code goes here
+    if n == 0:
+        return 1
+    n = abs(n)
+    a = 0
+    while  n>0:
+        
+        n = n//10
+        a += 1
+    return a
