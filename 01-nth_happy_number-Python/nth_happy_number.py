@@ -15,56 +15,22 @@
 # assert(nth_happy_number(8) == 31)
 
 
-def isPrime(n):
-    if (n < 2):
-        return False
-    if (n == 2):
+def Happynum(n):
+    sum = 0
+    while(n!=0):
+        sum += (n%10)**2
+        n//=10
+    if sum == 1:
         return True
-    if (n % 2 == 0):
+    elif sum<10:
         return False
-    maxFactor = round(n**0.5)
-    for factor in range(3,maxFactor+1,2):
-        if (n % factor == 0):
-            return False
-    return True
-#helper function to find the squares of digits
-def numSquareSum(n): 
-    squareSum = 0; 
-    while(n): 
-        squareSum += (n % 10) * (n % 10); 
-        n = int(n / 10); 
-    return squareSum; 
-  
-#to find out if it is a happy number or not
-def isHappynumber(n): 
-  
-
-    slow = n; 
-    fast = n; 
-    while(True): 
-          
-    
-   
-        slow = numSquareSum(slow); 
-
-        fast = numSquareSum(numSquareSum(fast)); 
-        if(slow != fast): 
-            continue; 
-        else: 
-            break; 
-  
-
-    return (slow == 1); 
-#finding nth happy primes
-
-def nthHappyPrime(n):
-    found = 0
-    guess = 0
-    while (found <= n):
-        guess += 1
-        #print(guess)
-        if ((isHappynumber(guess)) and (isPrime(guess))):
-            found += 1
-            #print(guess)
-    return guess
-	
+    else:
+        return Happynum(sum)
+def nth_happy_number(n):
+    f = 1
+    g = 0
+    while(f<=abs(n)):
+        g+=1
+        if(Happynum(g)):
+            f+=1
+    return g
