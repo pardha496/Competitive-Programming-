@@ -11,5 +11,26 @@ Return the index of value, or -1 if the value
 doesn't exist in the list."""
 
 def binary_search(input_array, value):
-    # Your code goes here
-    pass
+     
+  
+    (left, right) = (0, len(input_array) - 1)
+ 
+    while left <= right:
+ 
+       
+ 
+        mid = (left + right) // 2
+ 
+     
+        if value == input_array[mid]:
+            return mid
+ 
+        elif value < input_array[mid]:
+            right = mid - 1
+ 
+        
+        else:
+            left = mid + 1
+ 
+   
+    return -1
