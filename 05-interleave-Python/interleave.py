@@ -7,6 +7,11 @@
 
 
 
-def fun_interleave(s1,s2):
-	return ""
+def fun_interleave(s1, s2):
+    if len(s1) > len(s2):
+        return "".join ([s1[i] + s2[i] for i in range (len(s2))]) + s1[len(s2):]
+    elif len(s2) > len(s1):
+        return "".join ([s1[i] + s2[i] for i in range (len(s1))]) + s2[len(s1):]
+    else:
+        return "".join ([s1[i] + s2[i] for i in range (len(s1))])
 	
