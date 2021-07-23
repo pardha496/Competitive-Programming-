@@ -5,6 +5,8 @@
 # 3412 is a rotation of 1234. Any number 
 # is a rotation of itself.
 
-def isrotation(x, y):
-	# Your code goes here
-	pass
+def isrotation(x,y):
+    x=str(x)
+    y=str(y)
+    c=x[2:]+x[0:2]
+    return bool(c==y)
