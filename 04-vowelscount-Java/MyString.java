@@ -7,7 +7,8 @@
 public class MyString {
 	public int vowelCount(String s){
 		// Your code goes here...
-		return 0;
+		
+		
 	}
 	
 }
