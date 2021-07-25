@@ -13,29 +13,14 @@
 
 
 def fabricyards(inches):
-    # Your code goes here...
-    if(inches==0):
+    if inches<0:
         return 0
-    elif(inches>0 and inches<=36):
-        return 1
-    elif(inches>36):
-        x=inches//36
-        if(inches%36==0):
-            return x
-        else:
-            return x+1
+    if (inches%36==0):
+        return (inches//36)
+    else:
+        return ((inches//36)+1)
 
 def fabricexcess(inches):
-    # Your code goes here...
-    if(inches==0 or inches==36):
+    if inches==0 or (inches%36==0):
         return 0
-    elif(inches>=1 and inches<36):
-        x=36-inches
-        return x
-    else:
-        if(inches%36==0):
-            return 0
-        else:
-            x=inches%36
-            y=36-x
-            return y
+    return abs((inches%36)-36)
