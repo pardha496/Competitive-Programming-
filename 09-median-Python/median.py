@@ -4,5 +4,12 @@
 # element. If the list is empty, return None.
 
 def median(a):
-	# your code goes here
-	pass
+    # your code goes here
+     n=len(a)
+     if n==0:
+          return None
+     a.sort()
+     if n%2!=0:
+          return float(a[n//2])
+     else:
+         return (a[n//2]+a[(n-1)//2])/2
