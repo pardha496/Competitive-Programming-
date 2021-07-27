@@ -76,3 +76,4 @@ class LinkedList(object):
                 previous.next = n.next
             else:
                 self.head = n.next
+
