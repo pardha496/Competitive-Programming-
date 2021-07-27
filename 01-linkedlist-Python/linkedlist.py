@@ -23,6 +23,7 @@ class LinkedList(object):
         while n.next!=None:
             n=n.next
         n.next=new_element
+     
             
     def get_position(self, position):
         """Get an element from a particular position.
@@ -33,20 +34,22 @@ class LinkedList(object):
         n=self.head
         if position<1:
             return None
-        
+     
         while n and counter <= position:
             if counter==position:
                 return n
             n=n.next
             counter = counter+1
         return None
-    
+        
+  
     def insert(self, new_element, position):
         """Insert a new node at the given position.
         Assume the first position is "1".
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
         # Your code goes here
+      
         counter=1
         n=self.head
         if position>1:
@@ -59,7 +62,6 @@ class LinkedList(object):
         elif position == 1:
             new_element.next = self.head
             self.head = new_element
-    
     
     def delete(self, value):
         """Delete the first node with a given value."""
