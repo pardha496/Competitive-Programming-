@@ -7,13 +7,4 @@
 
 def issorted(a):
     # your code goes here
-    x=a.sort()
-    
-    if len(a)==0:
-        return True
-    elif(len(a)==1):
-        return True
-    elif(a==x ):
-        return True
-    else:
-        return False
+    return (len(a)==0 or (a==sorted(a)) or (a[::-1]==sorted(a)))
