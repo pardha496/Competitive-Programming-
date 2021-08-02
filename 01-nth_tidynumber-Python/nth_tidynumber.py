@@ -6,5 +6,24 @@
 # fun_nth_tidynumber(15) = 17
 # fun_nth_tidynumber(35) = 46
 
-def fun_nth_tidynumber(n):
-    return 0
+def TidyNumber(n):
+    
+    b=n%10
+    n=n//10
+    while (n>0):
+        r=n%10
+        if (r>b):
+            return False
+        b=r
+        n=n//10
+    return True
+            
+def nthTenlyPrime(n):
+    n=abs(n)
+    count=0
+    i=1
+    while (count<=n):
+        if TidyNumber(i):
+            count+=1
+        i=i+1
+    return i-1
